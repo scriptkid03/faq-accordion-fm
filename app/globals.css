@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-family: "WorkSans-Regular";
+}
+
+@font-face {
+  font-family: "WorkSans-Regular";
+  src: url("/fonts/WorkSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "WorkSans-Bold";
+  src: url("/fonts/WorkSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "WorkSans-SemiBold";
+  src: url("/fonts/WorkSans-SemiBold");
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
