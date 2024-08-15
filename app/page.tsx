@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  
+
   const toggleAnswer = (index: SetStateAction<number | null>) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-  
+
   const faqs = [
     {
       question: "What is Frontend Mentor, and how will it help me?",
@@ -18,37 +18,30 @@ export default function Home() {
     {
       question: "Is Frontend Mentor free?",
       answer:
-        "Frontend Mentor provides challenges that you can work on and submit for review. You get feedback from the community to help you improve.",
+        "Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels.",
     },
     {
       question: "Can I use Frontend Mentor projects in my portfolio?",
       answer:
-        "Frontend Mentor provides challenges that you can work on and submit for review. You get feedback from the community to help you improve.",
+        "Definitely! Please do feel free to use whatever you build in your portfolio. Helping developers add professional-looking projects to their portfolio was one of the reasons we created this platform!",
     },
     {
       question: "How can I get help if I'm stuck on a challenge?",
       answer:
-        "Frontend Mentor provides challenges that you can work on and submit for review. You get feedback from the community to help you improve.",
-    },
-    {
-      question: "How does Frontend Mentor work?",
-      answer:
-        "Frontend Mentor provides challenges that you can work on and submit for review. You get feedback from the community to help you improve.",
+        "The best (and quickest) way to get help on a challenge is in our Discord server. There are thousands of other developers in there, so it's a great place to ask questions.",
     },
   ];
 
   return (
     <main className="flex flex-col h-screen">
-      <div className="h-[65%] w-full bg-header-pattern bg-cover bg-center">
-
-      </div>
-      <div className="flex justify-center bg-lightPink w-full h-full">
-        <div className="flex flex-col gap-5 w-[40%] h-[120%] bg-white -mt-40 rounded-2xl p-12">
-          <div className="flex items-center text-darkPurple gap-5 text-5xl font-bold">
+      <div className="h-[45%] w-full bg-header-pattern bg-cover bg-center"></div>
+      <div className="flex justify-center bg-lightPink w-full flex-grow">
+        <div className="flex flex-col gap-5 h-fit w-full md:w-[40%] bg-white -mt-32 md:-mt-40 rounded-2xl p-6 md:p-12">
+          <div className="flex items-center text-darkPurple gap-5 text-3xl md:text-5xl font-bold">
             <Image
               src={"/svgs/icon-star.svg"}
-              width={40}
-              height={40}
+              width={30}
+              height={30}
               alt="star icon"
             />
             <span>FAQs</span>
@@ -81,7 +74,7 @@ export default function Home() {
                   </span>
                 </div>
               )}
-              <hr />
+              {index < faqs.length - 1 && <hr />}
             </div>
           ))}
         </div>
